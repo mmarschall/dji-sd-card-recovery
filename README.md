@@ -64,7 +64,7 @@ mkdir -p $W
 python3 -I recovery/card.py      $IMG > card.json     # geometry from the boot sector
 python3 -I recovery/scan2.py     $IMG $W/scan2.txt
 python3 -I recovery/pair.py      $IMG $W/scan2.txt $W/pairs.json
-python3 -I recovery/names.py     $W/scan2.txt $W/pairs.json $W/names.json Europe/Paris   # camera time zone
+python3 -I recovery/names.py     $W/scan2.txt $W/pairs.json $W/names.json America/New_York   # camera time zone
 python3 -I recovery/metaindex.py $IMG $W/metaindex.bin
 python3 -I recovery/plan_v4.py   $IMG $W/pairs.json $W/metaindex.bin $W/names.json $W/plan_v4 4
 python3 -I recovery/write_all.py $IMG $W/plan_v4.chains.pkl $OUT
